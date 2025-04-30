@@ -40,7 +40,7 @@ pipeline{
         }
         stage('OWASP FS SCAN') {
             steps {
-                dependencyCheck additionalArguments: '--scan ./ --disableYarnAudit --disableNodeAudit --nvdApiKey 62fc09fb-26bb-4832-b687-dadfcf43b086 ', odcInstallation: 'DC'
+                dependencyCheck additionalArguments: '--scan ./ --disableYarnAudit --disableNodeAudit --nvdApiKey c7615bd8-9d33-4c2a-9541-7f8cd755ed60  ', odcInstallation: 'DC'
                 dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
            }
         }
@@ -67,7 +67,7 @@ pipeline{
         }
         stage('Deploy to container'){
             steps{
-                sh 'docker run -d --name hotstar -p 3000:3000 kavya114/hotstar:latest'
+                sh 'docker run -d --name hotstar -p 3001:3000 kavya114/hotstar:latest'
             }
         }
 
