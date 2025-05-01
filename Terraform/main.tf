@@ -15,8 +15,8 @@ provider "aws" {
 }
 
 # create security group for the ec2 instance
-resource "aws_security_group" "ec2_security_group1" {
-  name        = "ec2 security group2"
+resource "aws_security_group" "ec2_security_group2" {
+  name        = "ec2 security group3"
   description = "allow access on ports 22"
 
   # allow access on port 22
