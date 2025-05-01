@@ -17,6 +17,7 @@ provider "aws" {
 # create security group for the ec2 instance
 resource "aws_security_group" "ec2_security_group2" {
   name        = "ec2 security group3"
+  vpc_id      = "vpc-0c1fb0e7610cb1508"
   description = "allow access on ports 22"
 
   # allow access on port 22
