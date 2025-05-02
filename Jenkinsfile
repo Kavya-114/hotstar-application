@@ -40,7 +40,7 @@ pipeline{
         }
         stage('OWASP FS SCAN') {
             steps {
-                dependencyCheck additionalArguments: '--scan ./ --disableYarnAudit --disableNodeAudit --nvdApiKey c7615bd8-9d33-4c2a-9541-7f8cd755ed60  ', odcInstallation: 'DC'
+                dependencyCheck additionalArguments: '--scan ./ --disableYarnAudit --disableNodeAudit --nvdApiKey e41ba15f-46a7-4281-8bc1-684cd63fdb2a  ', odcInstallation: 'DC'
                 dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
            }
         }
@@ -88,9 +88,9 @@ pipeline{
                     <p>Started by: ${buildUser}</p>
                     <p>Build URL: <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
                 """,
-                to: 'kavya11420@gmail.com',
-                from: 'kavya11420@gmail.com',
-                replyTo: 'kavya11420@gmail.com',
+                to: 'k9991385@gmail.com',
+                from: 'k9991385@gmail.com',
+                replyTo: 'k9991385@gmail.com',
                 mimeType: 'text/html',
                 attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
             )
